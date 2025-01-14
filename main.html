@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Mall</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Pretendard Variable', 'Apple SD Gothic Neo', NanumBarunGothic, '나눔바른고딕', 'Malgun Gothic', '맑은 고딕', dotum, sans-serif;
+            font-weight: 650;
+        }
+        #wrap {
+            margin: 0 auto;
+            width: 1280px;
+            height: 1080px;
+        }
+        #header {
+            background-color: beige;
+
+        }
+        #header-top {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        #logo {
+            font-size: 30px;
+            font-weight: 900;
+        }
+        #top-right-menu {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+        #top-right-menu li {
+            font-size: 16px;
+        }
+        #top-right-menu li a {
+            margin: 0;
+            cursor: pointer;
+            text-decoration: none;
+            color:#000;
+
+        }
+        .top-right-button > a:visited{
+            color:#000;
+        }
+        #header-middle{
+            display: flex;
+            margin-top: 20px;
+            align-items: center;
+        }
+        #hamburger {
+            margin-left: 20px;
+            background-image: url(./menu.svg);
+            background-repeat: no-repeat;
+            background-size: 36px 36px; 
+            width: 40px; 
+            height: 40px; 
+            border: none;
+            background-color: transparent; 
+            cursor: pointer; 
+        }
+        #header-middle > ul {
+            list-style: none;
+            display: flex;
+            gap: 60px;
+        }
+
+        /* 검색창 컨테이너 */
+        .search-container {
+            position: relative;
+            width: 300px;
+        }
+
+        /* 검색 입력창 */
+        .search-container input[type="text"] {
+            margin-left: 60px;
+            width: 70%;
+            padding: 10px 40px 10px 15px; /* 왼쪽 여백 추가 */
+            border: 1px solid #ccc;
+            border-radius: 25px;
+            font-size: 16px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.8); /* 반투명 */
+            transition: box-shadow 0.3s ease, background 0.3s ease;
+        }
+
+        /* 입력창에 포커스되었을 때 스타일 */
+        .search-container input[type="text"]:focus {
+            background: rgba(255, 255, 255, 1); /* 불투명 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 음영 */
+        }
+
+        /* 돋보기 아이콘 */
+        .search-container .material-icons {
+            position: absolute;
+            top: 50%;
+            right: 0px; /* 입력창 안쪽 여백 */
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: #aaa;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        /* 아이콘에 호버 효과 */
+        .search-container .material-icons:hover {
+            color: #000;
+        }
+        #header-bottom {
+            margin-top: 20px;
+        }
+        #bottom-nav {
+            list-style: none;
+            display: flex;
+            gap: 70px;
+        }
+        #bottom-nav > li {
+            font-family: "Libre Baskerville", serif;
+            font-size: 30px;
+            font-weight: 900;
+        }
+        #Social{
+            color:rgba(145, 145, 145, 0.9)
+        }
+        /* #bottom-nav > li:hover {
+           text-decoration: underline;
+        } */
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div id="header-top">
+                <div id="logo">LOGO</div>
+                <ul id="top-right-menu">
+                    <li id="shopping-bag" class="top-right-button">
+                        <span class="material-icons">
+                            shopping_cart
+                        </span>
+                        <a href="#">장바구니</a>
+                    </li>
+                    <li id="my-page" class="top-right-button">
+                        <span class="material-icons">
+                            account_circle
+                        </span>
+                        <a href="#">마이페이지</a>
+                    </li>
+                    <li id="sign-up" class="top-right-button">
+                        <span class="material-icons">
+                            assignment
+                        </span>
+                        <a href="#">회원가입</a>
+                    </li>
+                    <li id="login" class="top-right-button">
+                        <span class="material-icons">
+                            login
+                        </span>
+                        <a href="/login.html">로그인</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="header-middle">
+                <div id="nav">
+                    <button id="hamburger"></button>
+                </div>
+                <ul id="middle-menu">
+                    <li id="Home">Home</li>
+                    <li id="Magazine">Magazine</li>
+                    <li id="Services">Services</li>
+                    <li id="Events">Events</li>
+                    <li id="About Us">About Us</li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" placeholder="검색어를 입력하세요">
+                    <span class="material-icons">search</span>
+                </div>
+            </div>
+            <div id="header-bottom">
+                <ul id="bottom-nav">
+                    <li id="Best">Best</li>
+                    <li id="Women">Women</li>
+                    <li id="Men">Men</li>
+                    <li id="Kid">Kid</li>
+                    <li id="Ranking">Ranking</li>
+                    <li id="Social">Social</li>
+                </ul> 
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
